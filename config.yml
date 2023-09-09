@@ -1,0 +1,68 @@
+baseURL: http://atandoc.com/
+languageCode: en-us
+title: Judochopz
+theme: PaperMod
+
+menu:
+    main:
+      - identifier: home
+        name: Home
+        url: /
+        weight: 10
+      - identifier: projects
+        name: Projects
+        url: /projects/
+        weight: 20
+      - identifier: experience
+        name: Experience
+        url: /experience/
+        weight: 30
+      - identifier: search
+        name: Search
+        url: /search
+        weight: 40
+      - identifier: tags
+        name: Tags
+        url: /tags/
+        weight: 50
+      
+
+
+
+params:
+    profileMode:
+        enabled: true
+        title: Alec Tandoc
+        subtitle: 'Student at the **University of Chicago** double majoring in Computer Science and Mathematics'
+        imageUrl: img/headshot_2022.jpeg
+        imageTitle: "Me!"
+        imageWidth: 220
+        imageHeight: 220
+        buttons:
+            - name: Resume
+              url: "https://drive.google.com/file/d/19U2J8VDlJ36Zkq_jR2-Yp7seGzBJcEDt/view?usp=sharing"
+            - name: Github
+              url: "https://github.com/"            
+      
+    socialIcons:
+        - name: "email"
+          url: "mailto:alectandoc@gmail.com"
+        - name: "Github"
+          url: "https://github.com/Judochopz"
+        - name: "LinkedIn"
+          url: "https://linkedin.com/in/alec-tandoc"
+
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

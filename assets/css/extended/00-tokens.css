@@ -1,0 +1,30 @@
+/* Design tokens. Light is the default. PaperMod adds body.dark for dark mode. */
+:root {
+  --theme: #f7f8fa;
+  --entry: #f7f8fa;
+  --primary: #121826;
+  --secondary: #566174;
+  --tertiary: #e9edf3;
+  --content: #2a3445;
+  --hljs-bg: #e9edf3;
+  --code-bg: #e9edf3;
+  --border: #dbe0e8;
+  --m-accent: #0b7a6c;
+  --header-bg: rgba(247, 248, 250, 0.9);
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body.dark {
+  --theme: #0a0f18;
+  --entry: #0a0f18;
+  --primary: #edf1f7;
+  --secondary: #8e99aa;
+  --tertiary: #111925;
+  --content: #c7d0dc;
+  --hljs-bg: #111925;
+  --code-bg: #111925;
+  --border: #202936;
+  --m-accent: #72d5c6;
+  --header-bg: rgba(10, 15, 24, 0.9);
+}

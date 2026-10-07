@@ -1,7 +1,8 @@
-baseURL: http://atandoc.com/
+baseURL: https://atandoc.com/
 languageCode: en-us
-title: Judochopz
+title: Alec Tandoc
 theme: PaperMod
+googleAnalytics: G-4PMY7B6GCG
 
 menu:
     main:
@@ -17,40 +18,31 @@ menu:
         name: Experience
         url: /experience/
         weight: 30
-      - identifier: search
-        name: Search
-        url: /search
-        weight: 40
-      - identifier: tags
-        name: Tags
-        url: /tags/
-        weight: 50
-      
-
-
 
 params:
-    profileMode:
-        enabled: true
-        title: Alec Tandoc
-        subtitle: 'Student at the **University of Chicago** double majoring in Computer Science and Mathematics'
-        imageUrl: img/headshot_2022.jpeg
-        imageTitle: "Me!"
-        imageWidth: 220
-        imageHeight: 220
-        buttons:
-            - name: Resume
-              url: "https://drive.google.com/file/d/19U2J8VDlJ36Zkq_jR2-Yp7seGzBJcEDt/view?usp=sharing"
-            - name: Github
-              url: "https://github.com/"            
-      
-    socialIcons:
-        - name: "email"
-          url: "mailto:alectandoc@gmail.com"
-        - name: "Github"
-          url: "https://github.com/Judochopz"
-        - name: "LinkedIn"
-          url: "https://linkedin.com/in/alec-tandoc"
+    defaultTheme: auto
+    description: "Alec Tandoc — AI application engineer working across agents, forecasting, retrieval, and robust machine learning."
+    images: ["img/headshot_2024-min.jpg"]
+    label:
+        text: "Alec Tandoc"
+
+    home:
+        kicker: "Alec Tandoc · AI / ML Engineer"
+        headline: "Building intelligent systems that move from research to production."
+        lede: "Software engineering intern at Apple and University of Chicago graduate with a double major in computer science and computational and applied mathematics."
+        portrait: img/headshot_2024-min.jpg
+        portraitAlt: "Portrait of Alec Tandoc"
+        email: alectandoc@gmail.com
+        links:
+            - name: "Résumé ↗"
+              url: "/resume.pdf"
+            - name: "Email"
+              url: "mailto:alectandoc@gmail.com"
+            - name: "GitHub"
+              url: "https://github.com/Judochopz"
+            - name: "LinkedIn"
+              url: "https://linkedin.com/in/alec-tandoc"
+        skills: "Python, PyTorch, LangGraph, Azure ML, Qdrant, Docker, Kubernetes, and the systems around them."
 
     fuseOpts:
         isCaseSensitive: false

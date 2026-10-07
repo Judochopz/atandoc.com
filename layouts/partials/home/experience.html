@@ -1,0 +1,17 @@
+{{- $roles := where (where site.RegularPages "Section" "experience") "Params.featured" true }}
+<section class="work" aria-labelledby="work-title">
+  <div class="section-label"><span id="work-title">Experience</span></div>
+  <div class="work-list">
+    {{- range $roles }}
+    <article>
+      <div class="role-heading">
+        <h3>{{ .Params.company }}</h3>
+        <span>{{ .Params.period }} · {{ .Params.location }}</span>
+      </div>
+      <p class="role">{{ .Params.role }}</p>
+      <p>{{ .Params.summary }}</p>
+    </article>
+    {{- end }}
+  </div>
+  <a class="quiet-link" href="{{ "experience/" | relURL }}">View all experience →</a>
+</section>

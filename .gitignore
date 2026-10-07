@@ -1,0 +1,17 @@
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Firebase
+.firebase/
+firebase-debug.log*
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# macOS
+.DS_Store

@@ -1,0 +1,14 @@
+{{- $home := site.Params.home }}
+<section class="intro" aria-labelledby="intro-title">
+  <div class="intro-copy">
+    <p class="kicker">{{ $home.kicker }}</p>
+    <h1 id="intro-title">{{ $home.headline }}</h1>
+    <p class="lede">{{ $home.lede }}</p>
+    <div class="intro-links">
+      {{- range $home.links }}
+      <a href="{{ .url }}">{{ .name }}</a>
+      {{- end }}
+    </div>
+  </div>
+  <img class="portrait" src="{{ $home.portrait | absURL }}" alt="{{ $home.portraitAlt }}" width="220" height="220">
+</section>

@@ -1,0 +1,275 @@
+/* Home page */
+.minimal-home {
+  font-family: var(--sans);
+}
+
+.minimal-home * {
+  box-sizing: border-box;
+}
+
+.minimal-home a {
+  color: inherit;
+}
+
+/* Hide the theme footer on the home page. The contact block replaces it. */
+body:has(.minimal-home) .footer {
+  display: none;
+}
+
+.kicker,
+.section-label {
+  color: var(--m-accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Hero */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 90px;
+  align-items: center;
+  min-height: 650px;
+  padding: 120px 0 110px;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro h1 {
+  max-width: 760px;
+  margin: 24px 0 28px;
+  font-size: clamp(45px, 6.2vw, 72px);
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.052em;
+}
+
+.lede {
+  max-width: 660px;
+  color: var(--secondary);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.intro-links a,
+.quiet-link {
+  padding-bottom: 3px;
+  color: var(--secondary);
+  font-size: 13px;
+  border-bottom: 1px solid transparent;
+}
+
+.intro-links a:first-child {
+  color: var(--primary);
+}
+
+.intro-links a:hover,
+.quiet-link:hover {
+  color: var(--m-accent);
+  border-color: var(--m-accent);
+}
+
+.portrait {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(0.28) contrast(1.02);
+}
+
+/* Sections */
+.work,
+.feature,
+.skills {
+  padding: 95px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  color: var(--secondary);
+}
+
+.section-label span:first-child {
+  color: var(--m-accent);
+}
+
+/* Experience */
+.work-list {
+  border-top: 1px solid var(--border);
+}
+
+.work-list article {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 48px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.role-heading h3 {
+  margin: 0 0 7px;
+  font-size: 19px;
+}
+
+.role-heading span {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.role {
+  grid-column: 2;
+  margin: 2px 0 12px;
+  color: var(--m-accent);
+  font-size: 13px;
+}
+
+.work-list article > p:last-child {
+  grid-column: 2;
+  max-width: 620px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.quiet-link {
+  display: inline-block;
+  margin-top: 28px;
+}
+
+/* Featured project */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 90px;
+  align-items: end;
+}
+
+.feature h2 {
+  max-width: 700px;
+  margin: 0 0 20px;
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.feature h2 a:hover {
+  color: var(--m-accent);
+}
+
+.feature-grid > div > p {
+  color: var(--secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.feature-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--secondary);
+  font: 11px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Skills */
+.skills h2 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+/* Contact */
+.contact {
+  padding: 95px 0 115px;
+}
+
+.contact p {
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+.contact a {
+  font-size: clamp(24px, 4vw, 42px);
+  letter-spacing: -0.03em;
+}
+
+.contact a:hover {
+  color: var(--m-accent);
+}
+
+@media (max-width: 720px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .portrait {
+    grid-row: 1;
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro h1 {
+    font-size: 43px;
+  }
+
+  .lede {
+    font-size: 16px;
+  }
+
+  .work,
+  .feature,
+  .skills {
+    padding: 72px 0;
+  }
+
+  .work-list article {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .role,
+  .work-list article > p:last-child {
+    grid-column: 1;
+  }
+
+  .role {
+    margin-top: 16px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .feature-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .section-label {
+    gap: 25px;
+  }
+
+  .contact {
+    padding: 72px 0 90px;
+  }
+}

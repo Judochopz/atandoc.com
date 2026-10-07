@@ -1,0 +1,17 @@
+{{- $featured := where (where site.RegularPages "Section" "projects") "Params.featured" true }}
+{{- with index $featured 0 }}
+<section class="feature" aria-labelledby="project-title">
+  <div class="section-label"><span>Featured research</span><span>{{ .Date.Year }}</span></div>
+  <div class="feature-grid">
+    <div>
+      <h2 id="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Params.summary }}</p>
+    </div>
+    <div class="feature-meta">
+      {{- range .Params.highlights }}
+      <span>{{ . }}</span>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
